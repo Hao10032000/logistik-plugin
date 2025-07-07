@@ -1,0 +1,252 @@
+.animate-image {
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+    transition: all 0.8s ease;
+}
+
+.swiper-slide-active .animate-image {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    transition-delay: 0.4s;
+
+}
+
+.slide-title .letter {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.4s forwards;
+}
+
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-el {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.swiper-slide-active .animate-el {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.swiper-slide-active .slide-title {
+    transition-delay: 0.2s;
+}
+
+.swiper-slide-active .slide-desc {
+    transition-delay: 0.4s;
+}
+
+.swiper-slide-active .slider-btn {
+    transition-delay: 0.6s;
+}
+
+.swiper-slide-active .slide-image {
+    transition-delay: 0.3s;
+}
+
+.logistik-slider {
+    position: relative;
+    width: 100%;
+    height: 945px;
+    color: #fff;
+}
+
+.logistik-slider .slide-image {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.logistik-slider .slide-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logistik-slider .slide-content {
+    position: relative;
+    padding: 380px 48px 286px 48px;
+}
+
+.logistik-slider .slide-shape {
+    position: absolute;
+    bottom: 0;
+    right: 48px;
+}
+
+.logistik-slider .slide-text {
+    max-width: 696px;
+    z-index: 2;
+    position: relative;
+}
+
+.logistik-slider .slide-text h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 11px;
+    letter-spacing: -0.9px;
+}
+
+.logistik-slider .slide-text p {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 32px;
+    line-height: 28px;
+    letter-spacing: -0.9px;
+    font-family: 'mluvka';
+}
+
+.logistik-slider .slider-btn {
+    background-color: rgba(52, 204, 255, 0.2);
+    color: #fff;
+    border-radius: 99px;
+    font-weight: bold;
+    padding: 13px 30px;
+    border: 2px solid #34CCFF;
+    display: inline-block;
+}
+
+.logistik-slider .slide-shape img {
+    max-height: max-content;
+    width: 668px;
+    object-fit: contain;
+}
+
+.logistik-slider .swiper-custom-pagination {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    cursor: grab;
+    margin: 0px 48px;
+}
+
+.logistik-slider .swiper-custom-pagination.dragging {
+    cursor: grabbing;
+    user-select: none;
+}
+
+
+.logistik-slider .swiper-custom-pagination::-webkit-scrollbar {
+    display: none;
+}
+
+.logistik-slider .swiper-custom-dot {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 348px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 30px 12px 30px;
+    border-radius: 999px;
+    letter-spacing: 0.1px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    justify-content: center;
+    flex: 0 0 auto;
+    white-space: nowrap;
+}
+
+.logistik-slider .swiper-custom-dot svg,
+.logistik-slider .swiper-custom-dot img {
+    width: 40px;
+    margin-right: 15px;
+    color: #fff;
+    fill: #fff;
+    flex-shrink: 0;
+}
+
+.logistik-slider .swiper-custom-dot i {
+    font-size: 40px;
+    margin-right: 15px;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.logistik-slider .swiper-custom-dot.active {
+    background: #34CCFF;
+    border: 1px solid #34CCFF;
+}
+
+@media only screen and (max-width: 1200px) {
+    .logistik-slider .swiper-custom-dot {
+        width: auto;
+        padding: 10px 30px 10px 30px;
+    }
+
+    .logistik-slider .swiper-custom-dot svg,
+    .logistik-slider .swiper-custom-dot img {
+        width: 27px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .logistik-slider .slide-shape {
+        display: none;
+    }
+
+    .logistik-slider .slide-content {
+        padding: 240px 15px 220px 15px;
+    }
+
+    .logistik-slider .swiper-custom-pagination {
+        margin: 0px 15px;
+    }
+
+    .logistik-slider .slide-text {
+        max-width: 100%;
+    }
+
+    .logistik-slider {
+        height: 700px;
+
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .logistik-slider .slide-text h2 {
+        font-size: 35px;
+    }
+
+    .logistik-slider .slide-text p {
+        font-size: 16px;
+        margin-bottom: 25px;
+
+    }
+
+    .logistik-slider .slider-btn {
+        padding: 10px 30px;
+    }
+
+    .logistik-slider .slide-content {
+        padding: 150px 15px 140px 15px;
+    }
+
+    .logistik-slider {
+        height: 550px;
+
+    }
+}

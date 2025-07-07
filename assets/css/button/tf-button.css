@@ -1,0 +1,282 @@
+/* From Uiverse.io by satyamchaudharydev */
+.tf-btn {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  padding: 14px 32px;
+  background-color: #183650;
+  border-radius: 9999px;
+  display: inline-block;
+  color: #ffff;
+  font-weight: 700;
+  outline: none;
+  overflow: hidden;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  cursor: pointer;
+  font-family: "Mluvka";
+}
+
+.tf-btn svg {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease-in-out;
+  transform: translate(9px);
+  vertical-align: sub;
+  display: inline-block;
+}
+.tf-btn i {
+  transition: all 0.3s ease-in-out;
+  font-size: 20px;
+  transform: translate(9px);
+  vertical-align: sub;
+  display: inline-block;
+}
+
+.tf-btn:hover {
+  background-color: #34ccff;
+  color: #fff;
+}
+.tf-btn:hover i {
+  transform: translate(11px);
+}
+
+.tf-btn:hover::before {
+  animation: shine 1.5s ease-out infinite;
+}
+
+.tf-btn::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+}
+
+@keyframes shine {
+  0% {
+    left: -100px;
+  }
+
+  60% {
+    left: 100%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+/* Title */
+.title-list h3 {
+  font-size: 48px;
+  font-weight: 700;
+  font-family: "mluvka";
+  line-height: 1.4em;
+  letter-spacing: -1.1px;
+  color: #0a1722;
+  margin-bottom: 32px;
+  vertical-align: middle;
+}
+.title-list .description {
+  font-family: "Mluvka";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 138%;
+  letter-spacing: 0;
+  text-align: justify;
+  vertical-align: middle;
+  color: #777777;
+}
+/* Testimonial*/
+.testimonial-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 24px 24px 32px 24px;
+  text-align: center;
+  position: relative;
+  margin-right: 19px;
+}
+.testimonial-avatar {
+  text-align: center;
+  display: inline-block;
+}
+.testimonial-avatar img {
+  width: 90px;
+  height: 90px;
+  border-radius: 999px;
+
+  object-fit: cover;
+}
+.testimonial-card .description {
+  color: #0a1722;
+  font-family: Mluvka;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 139%;
+  letter-spacing: 0;
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.testimonial-card .info-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  position: relative;
+  background-color: #22c7f5;
+  border-radius: 999px 0px 999px 999px;
+  padding: 18px 26px 11px 26px;
+  margin-right: -42px;
+  color: #fff;
+    width: max-content;
+}
+.testimonial-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+.testimonial-footer .name {
+  text-align: left;
+  font-family: "Mluvka";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 130%;
+  letter-spacing: 0;
+  text-transform: capitalize;
+  color: #0a1722;
+}
+
+.testimonial-footer .position {
+  color: #00000085;
+  font-family: "Mluvka";
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  display: inline-block;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.testimonial-card .rating-box {
+  background: #0b132a;
+  color: #fff;
+  padding: 15px 15px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: "Mluvka";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+}
+
+.testimonial-pagination-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 35px;
+}
+
+.page-current,
+.page-total {
+  font-family: "Mluvka";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #34ccff;
+}
+
+.pagination-lines {
+  display: flex;
+  flex: 1;
+  max-width: 400px;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination-line {
+  flex: 1;
+  height: 1px;
+  width: 92.5px;
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.pagination-line.active {
+  background: #34ccff;
+}
+
+.info-box::before {
+  content: "";
+  position: absolute;
+  bottom: 23px;
+  right: 0px;
+  width: 18px;
+  height: 85%;
+  border-radius: 0px 0px 999px 999px;
+  background-color: #22c7f5;
+  z-index: 1;
+}
+.info-box::after {
+  content: "";
+  position: absolute;
+  right: 1px;
+  top: -15px;
+  width: 0;
+  height: 0;
+  rotate: -74deg;
+  border-style: solid;
+  border-width: 5px 16px 16px 5px;
+  border-color: transparent #7486a1 transparent transparent;
+  z-index: 2;
+}
+
+/* Nội dung hiển thị phía trên mask */
+.info-box .info-box,
+.info-box .rating-box {
+  position: relative;
+  z-index: 2;
+}
+
+.info-box .info-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.info-box .rating-box .star {
+  color: gold;
+  font-size: 14px;
+}
+
+
+@media (max-width: 600px) {
+  .pagination-line {
+    flex: unset;
+    width: 19.5px;
+  }
+  .pagination-lines {
+    max-width: max-content;
+  }
+  .page-current,
+  .page-total {
+    font-size: 16px;
+  }
+}
