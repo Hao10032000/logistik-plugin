@@ -111,6 +111,12 @@ final class ThemesFlat_Addon_For_Elementor_proty {
         require_once plugin_dir_path( __FILE__ ).'/addon-elementor-icon-manager.php';
         require_once THEMESFLAT_PATH . '/poststype/init-posts-type.php';
 
+        // Add widget wordpress core
+        
+        require_once plugin_dir_path( __FILE__ ).'/widgets/class-button-whatapp.php';
+        require_once plugin_dir_path( __FILE__ ).'/widgets/class-button-form.php';
+
+
         add_action( 'init', [ $this, 'tf_header_footer_post_type' ] );
         add_action( 'add_meta_boxes', [ $this, 'tf_header_footer_register_metabox' ] );
         add_action( 'save_post', [ $this, 'tf_header_footer_save_meta' ] );
@@ -172,9 +178,6 @@ final class ThemesFlat_Addon_For_Elementor_proty {
         require_once( __DIR__ . '/widgets/widget-title-description.php' );
         \Elementor\Plugin::instance()->widgets_manager->register( new \TFTitleDescription_Widget() );
 
-        require_once( __DIR__ . '/widgets/widget-list-image-animation.php' );
-        \Elementor\Plugin::instance()->widgets_manager->register( new \TFListLogoAnimation_Widget() );
-
         require_once( __DIR__ . '/widgets/widget-team.php' );
         \Elementor\Plugin::instance()->widgets_manager->register( new \TFTeam_Widget() );
 
@@ -189,6 +192,12 @@ final class ThemesFlat_Addon_For_Elementor_proty {
 
          require_once( __DIR__ . '/widgets/widget-list-image.php' );
         \Elementor\Plugin::instance()->widgets_manager->register( new \TFListImage_Widget() );
+
+         require_once( __DIR__ . '/widgets/widget-iconbox.php' );
+        \Elementor\Plugin::instance()->widgets_manager->register( new \TFIconBox_Widget() );
+
+        require_once( __DIR__ . '/widgets/widget-blog.php' );
+        \Elementor\Plugin::instance()->widgets_manager->register( new \TFBlog_Widget() );
 
     }
 
@@ -205,6 +214,14 @@ final class ThemesFlat_Addon_For_Elementor_proty {
         wp_register_style( 'owl-carousel', plugins_url( '/assets/css/owl.carousel.min.css', __FILE__ ) );
         wp_register_style( 'tf-gallery', plugins_url( '/assets/css/gallery/tf-gallery.css', __FILE__ ) );
         wp_register_style( 'light-gallery', plugins_url( '/assets/css/light-gallery/light-gallery.css', __FILE__ ) );
+        wp_register_style( 'tf-list-image', plugins_url( '/assets/css/list-image/tf-list-image.css', __FILE__ ) );
+        wp_register_style( 'tf-iconbox', plugins_url( '/assets/css/iconbox/tf-iconbox.css', __FILE__ ) );
+
+        wp_register_style( 'tf-whapapp', plugins_url( '/assets/css/whapapp/tf-whapapp.css', __FILE__ ) );
+        wp_register_style( 'tf-btn-form', plugins_url( '/assets/css/btn-form/tf-btn-form.css', __FILE__ ) );
+
+        wp_register_style( 'tf-blog', plugins_url( '/assets/css/blog/tf-blog.css', __FILE__ ) );
+
 
         // 3rd
         wp_register_style( 'swiper-css', plugins_url( '/assets/css/swiper.css', __FILE__ ) );
@@ -224,6 +241,7 @@ final class ThemesFlat_Addon_For_Elementor_proty {
         wp_register_script( 'tf-service', plugins_url( '/assets/js/service/tf-service.js', __FILE__ ), [ 'jquery' ], false, true );
         wp_register_script( 'tf-testimonial', plugins_url( '/assets/js/testimonial/tf-testimonial.js', __FILE__ ), [ 'jquery' ], false, true );
         wp_register_script( 'tf-slider', plugins_url( '/assets/js/slider/slider.js', __FILE__ ), [ 'jquery' ], false, true );
+        wp_register_script( 'tf-blog', plugins_url( '/assets/js/blog/tf-blog.js', __FILE__ ), [ 'jquery' ], false, true );
 
         wp_register_script( 'light-gallery', plugins_url( '/assets/js/light-gallery.js', __FILE__ ), [ 'jquery' ], false, true );
 

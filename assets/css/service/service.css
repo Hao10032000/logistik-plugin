@@ -145,7 +145,10 @@
 
 
 /* single service */
-
+.single-service .title {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
 
 /* archive service */
 
@@ -177,8 +180,7 @@
         gap: 20px;
     }
     .no-carousel .wrap-services-post.tablet-column-3 {
-        grid-template-columns: repeat(3,1fr);
-        
+        grid-template-columns: repeat(3,1fr);        
     }
 
     .no-carousel .wrap-services-post.tablet-column-2 {

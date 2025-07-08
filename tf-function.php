@@ -102,4 +102,16 @@ function postype_image_sizes() {
 add_action('after_setup_theme', 'postype_image_sizes');
 
 
+// Add service sidebar
+function service_register_sidebar() {
+    register_sidebar([
+        'name'          => 'Service Sidebar',
+        'id'            => 'service_sidebar',
+        'before_widget' => '<div class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ]);
+}
+add_action('widgets_init', 'service_register_sidebar');
 

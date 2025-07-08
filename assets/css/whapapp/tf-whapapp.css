@@ -1,0 +1,99 @@
+.tf-btn-whatapp {
+    display: block;
+    background: #2DB742;
+    cursor: pointer;
+    -webkit-transition: 0.4s ease all;
+    -moz-transition: 0.4s ease all;
+    position: relative;
+    margin: 20px 0 20px;
+    display: flex;
+    border-radius: 99px;
+}
+.featured-image {
+    flex-shrink: 0;
+    position: relative;
+}
+.tf-whatapp {
+    margin: 30px 0 30px;
+}
+.tf-btn-whatapp img {
+    width: 90px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+.tf-btn-whatapp svg {
+    background: #fff;
+    padding: 2px;
+    display: block;
+    width: 27px;
+    height: 27px;
+    position: absolute;
+    top: 20px;
+    right: -14px;
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 4px 6px 0px rgba(39, 38, 38, 0.3);
+}
+.tf-btn-whatapp .content {
+    padding: 15px 30px;
+}
+.tf-btn-whatapp .infor .name {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.36em;
+    opacity: 0.8;
+    color: #d5f0d9;
+    display: inline-block;
+}
+.tf-btn-whatapp .infor .status {
+    background: #62c971;
+    width: 36px;
+    height: 14px;
+    margin-left: 3px;
+    padding: 1px;
+    font-size: 9px;
+    line-height: 1.34em;
+    border-radius: 5px;
+    color: rgba(255, 255, 255, 0.98);
+    position: relative;
+    top: -1px;
+    left: 0px;
+    text-align: center;
+    display: inline-block;
+}
+.tf-btn-whatapp .text-btn {
+    font-weight: 600;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1.33em;
+    color: #fff;
+}
+.widget_button_form_widget {
+    margin-bottom: 30px;
+}
+.tf-btn-form {
+    font-size: 14px;
+    padding: 14px 20px;
+    color: #FFF;
+    background-color: #08c;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+.tf-btn-form:hover {
+    color: #FFF;
+}
+.tf-icon-svg svg {
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    margin-right: 30px;
+}
+.tf-icon-svg svg path {
+    fill: #fff;
+}

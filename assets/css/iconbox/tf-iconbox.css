@@ -1,0 +1,29 @@
+.tf-iconbox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.tf-iconbox .icon-box {
+    width: 96px;
+    height: 96px;
+    border-radius: 999px;
+    background: #34CCFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tf-iconbox .icon-box i {
+    color: #fff;
+}
+.tf-iconbox .icon-box svg path {
+    fill: #fff;
+}
+.tf-iconbox .title {
+    font-family: 'Mluvka';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0px;
+    vertical-align: middle;
+    padding-left: 24px;
+}

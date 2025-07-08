@@ -35,10 +35,6 @@ class TFListImage_Widget extends \Elementor\Widget_Base {
 					'label' => esc_html__( 'Partner Style', 'themesflat-core' ),
 					'type' => \Elementor\Controls_Manager::CHOOSE,
 					'options' => [
-						'style-text' => [
-							'title' => esc_html__( 'Style Text', 'themesflat-core' ),
-							'icon' => 'fa fa-edit',
-						],
 						'style-image' => [
 							'title' => esc_html__( 'Style Image', 'themesflat-core' ),
 							'icon' => 'fa fa-image',
@@ -77,86 +73,6 @@ class TFListImage_Widget extends \Elementor\Widget_Base {
 				]
 			);
 
-			$repeater2->add_control(
-				'partner_text',
-				[
-					'label' => esc_html__( 'Content Text', 'themesflat-core' ),
-					'type' => \Elementor\Controls_Manager::TEXT,
-					'default' => esc_html__( 'IT Services', 'themesflat-core' ),
-				]
-			);
-
-			$repeater2->add_control(
-				'icon_text',
-				[
-					'label' => esc_html__( 'Icon', 'themesflat-core' ),
-					'type' => \Elementor\Controls_Manager::ICONS,
-					'default' => [
-						'value' => 'fas fa-star-of-life',
-						'library' => 'theme_icon',
-					],
-				]
-			);
-
-			$repeater2->add_control(
-				'link_text',
-				[
-					'label' => esc_html__( 'Content Link', 'themesflat-core' ),
-					'type' => \Elementor\Controls_Manager::URL,
-					'placeholder' => esc_html__( 'https://your-link.com', 'themesflat-core' ),
-					'default' => [
-						'url' => '#',
-						'is_external' => false,
-						'nofollow' => false,
-					],
-				]
-			);
-
-			$this->add_control(
-				'list2',
-				[
-					'label' => esc_html__( 'List', 'themesflat-core' ),
-					'type' => \Elementor\Controls_Manager::REPEATER,
-					'fields' => $repeater2->get_controls(),
-					'default' => [
-						[
-							'partner_text' => esc_html__( 'IT Services', 'themesflat-core' ),
-							'link_text' => esc_html__( '#', 'themesflat-core' ),
-						],
-						[
-							'partner_text' => esc_html__( 'Cyber Security', 'themesflat-core' ),
-							'link_text' => esc_html__( '#', 'themesflat-core' ),
-						],
-						[
-							'partner_text' => esc_html__( 'Data Security', 'themesflat-core' ),
-							'link_text' => esc_html__( '#', 'themesflat-core' ),
-						],
-						[
-							'partner_text' => esc_html__( 'IT Services', 'themesflat-core' ),
-							'link_text' => esc_html__( '#', 'themesflat-core' ),
-						],
-						[
-							'partner_text' => esc_html__( 'Cyber Security', 'themesflat-core' ),
-							'link_text' => esc_html__( '#', 'themesflat-core' ),
-						],
-						[
-							'partner_text' => esc_html__( 'Data Security', 'themesflat-core' ),
-							'link_text' => esc_html__( '#', 'themesflat-core' ),
-						],
-						[
-							'partner_text' => esc_html__( 'IT Services', 'themesflat-core' ),
-							'link_text' => esc_html__( '#', 'themesflat-core' ),
-						],
-						[
-							'partner_text' => esc_html__( 'Cyber Security', 'themesflat-core' ),
-							'link_text' => esc_html__( '#', 'themesflat-core' ),
-						],
-					],
-					'condition' => [
-						'partner_style' => 'style-text'
-					]
-				]
-			);
 
 			$this->add_control(
 				'list',
@@ -189,14 +105,7 @@ class TFListImage_Widget extends \Elementor\Widget_Base {
 							'image' =>  URL_THEMESFLAT_ADDONS_ELEMENTOR_THEME."assets/img/placeholder.jpg",
 							'link' => esc_html__( '#', 'themesflat-core' ),
 						],
-						[
-							'image' =>  URL_THEMESFLAT_ADDONS_ELEMENTOR_THEME."assets/img/placeholder.jpg",
-							'link' => esc_html__( '#', 'themesflat-core' ),
-						],
-						[
-							'image' =>  URL_THEMESFLAT_ADDONS_ELEMENTOR_THEME."assets/img/placeholder.jpg",
-							'link' => esc_html__( '#', 'themesflat-core' ),
-						],
+
 					],
 					'condition' => [
 						'partner_style' => 'style-image'
@@ -290,7 +199,7 @@ class TFListImage_Widget extends \Elementor\Widget_Base {
 						],
 					],
 					'selectors' => [
-						'{{WRAPPER}} .tf-list-image .box-item .item  ' => 'width: {{SIZE}}{{UNIT}};',
+						'{{WRAPPER}} .tf-list-image .box-item .item  ' => 'height: {{SIZE}}{{UNIT}};',
 					],
 					'condition' => [
 						'partner_style' => 'style-image'
@@ -321,156 +230,8 @@ class TFListImage_Widget extends \Elementor\Widget_Base {
 						],
 					],
 					'selectors' => [
-						'{{WRAPPER}} .tf-list-image .box-item .item' => 'padding-left: {{SIZE}}{{UNIT}};padding-right: {{SIZE}}{{UNIT}};',
+						'{{WRAPPER}} .tf-list-image .box-item .item' => 'margin: {{SIZE}}{{UNIT}};',
 					],
-				]
-			);
-
-			$this->add_control(
-				'heading_icon',
-				[
-					'label' => esc_html__( 'Icon', 'themesflat-core' ),
-					'type' => \Elementor\Controls_Manager::HEADING,
-					'separator' => 'before',
-					'condition' => [
-						'partner_style' => 'style-text'
-					]
-				]
-			);
-
-			$this->add_responsive_control( 
-	        	'size_icon',
-				[
-					'label' => esc_html__( 'Icon Size', 'themesflat-core' ),
-					'type' => \Elementor\Controls_Manager::SLIDER,
-					'size_units' => [ 'px' ],
-					'range' => [
-						'px' => [
-							'min' => 0,
-							'max' => 1000,
-							'step' => 1,
-						],
-					],
-					'selectors' => [
-						'{{WRAPPER}} .tf-list-image .icon i' => 'font-size: {{SIZE}}{{UNIT}};',
-						'{{WRAPPER}} .tf-list-image .icon svg' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
-					],
-					'condition' => [
-						'partner_style' => 'style-text'
-					]
-				]
-			);
-
-			$this->add_control( 
-				'icon_color',
-				[
-					'label' => esc_html__( 'Color', 'themesflat-core' ),
-					'type' => \Elementor\Controls_Manager::COLOR,
-					'selectors' => [
-						'{{WRAPPER}} .tf-list-image .icon i' => 'color: {{VALUE}}',
-						'{{WRAPPER}} .tf-list-image .icon svg path' => 'fill: {{VALUE}}',
-					],
-					'condition' => [
-						'partner_style' => 'style-text'
-					]
-				]
-			); 
-
-			$this->add_responsive_control( 
-	        	'icon_text_spacing',
-				[
-					'label' => esc_html__( 'Icon Spacing', 'themesflat-core' ),
-					'type' => \Elementor\Controls_Manager::SLIDER,
-					'size_units' => [ 'px' ],
-					'range' => [
-						'px' => [
-							'min' => 0,
-							'max' => 1000,
-							'step' => 1,
-						],
-					],
-					'selectors' => [
-						'{{WRAPPER}} .tf-list-image .list-text .icon' => 'margin-right: {{SIZE}}{{UNIT}};',
-					],
-					'condition' => [
-						'partner_style' => 'style-text'
-					]
-				]
-			);
-
-			$this->add_control(
-				'heading_text',
-				[
-					'label' => esc_html__( 'Text', 'themesflat-core' ),
-					'type' => \Elementor\Controls_Manager::HEADING,
-					'separator' => 'before',
-					'condition' => [
-						'partner_style' => 'style-text'
-					]
-				]
-			);
-
-	        $this->add_group_control( 
-	        	\Elementor\Group_Control_Typography::get_type(),
-				[
-					'name' => 'text_typography',
-					'label' => esc_html__( 'Text Typography', 'themesflat-core' ),
-					'selector' => '{{WRAPPER}} .tf-list-image .list-text a',
-					'condition' => [
-						'partner_style' => 'style-text'
-					]
-				]
-			);
-			
-			$this->add_control( 
-				'text_color',
-				[
-					'label' => esc_html__( 'Color', 'themesflat-core' ),
-					'type' => \Elementor\Controls_Manager::COLOR,
-					'selectors' => [
-						'{{WRAPPER}} .tf-list-image .list-text a' => 'color: {{VALUE}}',
-					],
-					'condition' => [
-						'partner_style' => 'style-text'
-					]
-				]
-			); 
-
-			$this->add_control( 
-				'text_color_hover',
-				[
-					'label' => esc_html__( 'Color Hover', 'themesflat-core' ),
-					'type' => \Elementor\Controls_Manager::COLOR,
-					'selectors' => [
-						'{{WRAPPER}} .tf-list-image .list-text a:hover' => 'color: {{VALUE}}',
-						'{{WRAPPER}} .tf-list-image .list-text a:hover i' => 'color: {{VALUE}}',
-						'{{WRAPPER}} .tf-list-image .list-text a:hover svg path' => 'fill: {{VALUE}}',
-					],
-					'condition' => [
-						'partner_style' => 'style-text'
-					]
-				]
-			); 
-
-			$this->add_responsive_control( 
-	        	'line_hover_hieght',
-				[
-					'label' => esc_html__( 'Height Line Bottom Hover', 'themesflat-core' ),
-					'type' => \Elementor\Controls_Manager::SLIDER,
-					'size_units' => [ 'px' ],
-					'range' => [
-						'px' => [
-							'min' => 0,
-							'max' => 1000,
-							'step' => 1,
-						],
-					],
-					'selectors' => [
-						'{{WRAPPER}} .tf-list-image .list-text a .text::after' => 'height: {{SIZE}}{{UNIT}};',
-					],
-					'condition' => [
-						'partner_style' => 'style-text'
-					]
 				]
 			);
 
